@@ -71,29 +71,28 @@
 
 
 <?php
-// 配列の各要素に関数を適用
-// 配列の値をドルに換算してリスト表示
+// // 配列の各要素に関数を適用
+// // 配列の値をドルに換算してリスト表示
 
-// 通過換算コールバック関数
-function exchangeList($value, $key, $rateData) {
-    $rate = $rateData["rate"];
-    if ($rate == 0) {
-        return;
-    }
-    $price = $value/$rate;
-    $exPrice = sprintf("%.02f", $price);
+// // 通過換算コールバック関数
+// function exchangeList($value, $key, $rateData) {
+//     $rate = $rateData["rate"];
+//     if ($rate == 0) {
+//         return;
+//     }
+//     $price = $value/$rate;
+//     $exPrice = sprintf("%.02f", $price);
 
-    echo "<li>", $rateData["symbol"], $exPrice, "</li>";
-}
+//     echo "<li>", $rateData["symbol"], $exPrice, "</li>";
+// }
 
 
 
-$priceList = [1000, 1500, 1800];
+// $priceList = [1000, 1500, 1800];
 
-$dollaryen = ["symbol"=>"$", "rate"=>112.50];
+// $dollaryen = ["symbol"=>"$", "rate"=>112.50];
 
-echo "<ul>";
-array_walk($priceList, "exchangeList", $dollaryen);
-echo "</ul>";
-
+// echo "<ul>";
+// array_walk($priceList, "exchangeList", $dollaryen);
+// echo "</ul>";
 ?>
